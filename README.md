@@ -82,9 +82,7 @@ proot-distro login ubuntu
 $chmod +x ~/u  
   
 追加termux开机执行命令，增加命令提示符内容，映射ll命令等于ls -laF命令，开机启动sshd进程，用source命令运行u脚本，  
-这样启动ubuntu就不会出现在ssh界面打exit命令导致ubuntu关机的情况，因为这时ubuntu不是子进程，  
-当然在手机终端界面上打exit命令还是会导致ubuntu关机，因为termux是一个单用户系统  
-  
+      
 $touch ~/.bashrc  
 $echo "PS1=\"\u@\s:\w\$\"" >> ~/.bashrc  
 $echo "alias ll='ls -alF'" >> ~/.bashrc  
@@ -99,8 +97,8 @@ $echo "source /data/data/com.termux/files/home/u" >> ~/.bashrc
   
 #passwd  
   
-一定要先用apt update更新源，另外因为termux安装的linux不能用密码登录ssh，只能是证书登录，比较麻烦，所以需要安装telnet服务，  
-才能用telnet密码方式登录，所以安装telnet服务  
+一定要先用apt update更新源，另外因为termux安装的linux不能用密码登录ssh，只能是证书登录，比较麻烦，   
+所以需要安装telnet服务，才能用telnet密码方式登录，所以安装telnet服务  
   
 #apt update -y  
 #apt install openbsd-inetd telnetd -y  
