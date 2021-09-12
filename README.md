@@ -126,7 +126,7 @@ $echo "source /data/data/com.termux/files/home/u" >> ~/.bashrc
   
 至此已经可以在其他机器上使用终端程序telnet直接以用户root及密码方式登录这个ubuntu容器了，telnet端口号就是上面的5223，  
 由于ubuntu使用了容器的网络主机模式(host)，即与主机共用所有的网络接口，也即android主机的网络就是它的网络，  
-android主机的ip地址就是它的ip地址，查登录接口ip地址的命令：  
+android主机的ip地址就是它的ip地址，它监听的端口也等于主机监听的端口，查登录接口ip地址的命令：  
   
 #ifconfig wlan0  
   
