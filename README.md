@@ -1,0 +1,2 @@
+# android_termux_install_linux_ssh_telnet
+安卓termux安装linux正式发行版并配置SSH及telnet过程
