@@ -99,8 +99,9 @@ $echo "source /data/data/com.termux/files/home/u" >> ~/.bashrc
   
 #passwd  
   
-一定要先用apt update更新源，另外因为termux安装的linux不能用密码登录ssh，只能是证书登录，比较麻烦，   
-所以需要安装telnet服务，才能用telnet密码方式登录，所以安装telnet服务  
+一定要先用apt update更新源，另外因为termux安装的ssh进程与启动的ubuntu的ssh进程冲突，即使在ubuntu里面再安装openssh-server，  
+也不能用ubuntu里面ssh监听的端口登录，所以需要安装telnet服务，才能用终端直接telnet方式登录ubuntu，  
+否则没有办法直接用终端方式登录里面的ubuntu    
   
 #apt update -y  
 #apt install openbsd-inetd telnetd -y  
